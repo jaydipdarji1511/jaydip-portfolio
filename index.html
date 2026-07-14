@@ -1,239 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jaydip portfolio</title>
-    <link rel="stylesheet" href="chirag.css">
-    <script src="http://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jaydip Darji — Computer Engineer, web developer and data enthusiast." />
+  <title>Jaydip Darji | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#101828;--muted:#5f6b7a;--paper:#f7f8fa;--line:#e6e9ee;--accent:#f15a38;--navy:#14213d;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif;line-height:1.6}
+    a{text-decoration:none;color:inherit}.wrap{max-width:1160px;margin:auto;padding:0 28px}.eyebrow{font:500 .73rem/1 "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+    header{min-height:100vh;background:var(--navy);color:white;position:relative;overflow:hidden}header:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,#f15a3838 0%,transparent 67%);right:-120px;top:90px}
+    nav{height:82px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}.brand{font-weight:800;letter-spacing:-.06em;font-size:1.55rem}.brand i{color:var(--accent);font-style:normal}.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:.82rem;font-weight:700}.nav-links a{opacity:.78}.nav-links a:hover{opacity:1;color:#ff9c83}.menu{display:none;border:0;background:transparent;color:#fff;font-size:1.45rem}
+    .hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;position:relative;z-index:1}.hero-copy{padding:52px 0 84px}.hero h1{font-size:clamp(3.1rem,7vw,6.4rem);letter-spacing:-.075em;line-height:.96;margin:18px 0 26px;max-width:710px}.hero h1 span{color:#ff8567}.hero p{font-size:1.05rem;max-width:515px;color:#c2cad9;margin:0 0 34px}.actions{display:flex;gap:14px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:6px;font-size:.86rem;font-weight:800;transition:.2s}.button.primary{background:var(--accent);color:#fff}.button.primary:hover{background:#d84527;transform:translateY(-2px)}.button.ghost{border:1px solid #5b667d;color:#fff}.button.ghost:hover{border-color:#fff}.hero-art{height:525px;position:relative;display:flex;justify-content:center;align-items:end}.portrait{width:min(100%,390px);height:470px;object-fit:cover;object-position:center top;border-radius:210px 210px 18px 18px;filter:grayscale(15%);position:relative;z-index:1}.orbit{position:absolute;width:440px;height:440px;border:1px solid #ffffff38;border-radius:50%;bottom:20px}.tag{position:absolute;z-index:2;background:#fff;color:var(--ink);padding:12px 15px;border-radius:7px;box-shadow:0 15px 30px #0003;font:500 .7rem "DM Mono",monospace}.tag.one{left:0;top:120px}.tag.two{right:0;bottom:88px}.scroll{position:absolute;bottom:26px;font:500 .68rem "DM Mono",monospace;color:#aeb8ca;letter-spacing:.1em}
+    section{padding:105px 0}.section-head{max-width:650px;margin-bottom:52px}.section-head h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;letter-spacing:-.06em;margin:12px 0 0}.section-head p{color:var(--muted);margin:16px 0 0}.about{background:#fff}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start}.stats{border-top:1px solid var(--line)}.stat{padding:24px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.stat b{font-size:2rem;letter-spacing:-.07em}.stat span{color:var(--muted);font-size:.88rem;max-width:180px}.about-text{font-size:1.12rem;color:#3f4a59;margin:0 0 28px}.skills{display:flex;flex-wrap:wrap;gap:9px}.skills span{border:1px solid var(--line);padding:8px 12px;border-radius:99px;font:500 .75rem "DM Mono",monospace;color:#44505e}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px;min-height:275px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-5px);box-shadow:0 18px 35px #17233a12}.num{font:500 .75rem "DM Mono",monospace;color:var(--accent)}.card h3{font-size:1.55rem;letter-spacing:-.045em;margin:35px 0 10px}.card p{color:var(--muted);font-size:.92rem;margin:0}.card a{margin-top:auto;padding-top:25px;font-weight:800;font-size:.84rem;color:var(--accent)}
+    .work{background:#101c35;color:#fff}.work .section-head p{color:#b7c1d1}.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.work-item{background:#1c2a47;border-radius:10px;overflow:hidden}.work-image{height:260px;width:100%;object-fit:cover;object-position:top;display:block;transition:transform .35s}.work-item:hover .work-image{transform:scale(1.04)}.work-info{padding:24px}.work-info h3{margin:0 0 5px;font-size:1.25rem;letter-spacing:-.04em}.work-info p{color:#b7c1d1;margin:0 0 18px;font-size:.88rem}.project-link{color:#ff9c83;font-weight:800;font-size:.82rem}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}.contact-title{font-size:clamp(2.4rem,5vw,4.6rem);letter-spacing:-.07em;line-height:1;margin:14px 0 25px}.contact-title span{color:var(--accent)}.contact-details{display:grid;gap:16px;margin-top:30px}.contact-details a{font-weight:700;border-bottom:1px solid var(--line);padding-bottom:14px;width:max-content;max-width:100%}.contact-details a:hover{color:var(--accent)}form{display:grid;gap:14px}input,textarea{font:inherit;font-size:.9rem;border:1px solid var(--line);background:#fff;border-radius:5px;padding:14px;outline:none;width:100%}input:focus,textarea:focus{border-color:var(--accent)}textarea{min-height:130px;resize:vertical}form .button{border:0;cursor:pointer;width:max-content}.form-note{font-size:.82rem;color:#268a58;margin:0;min-height:20px}
+    footer{background:#101828;color:#9cabbf;padding:24px 0;font-size:.78rem}.footer-inner{display:flex;justify-content:space-between;gap:15px}.socials{display:flex;gap:16px;color:#fff;font-weight:700}.socials a:hover{color:#ff9c83}
+    @media(max-width:760px){.wrap{padding:0 20px}.nav-links{display:none}.menu{display:block}.nav-links.open{display:flex;position:absolute;top:68px;right:0;background:#223150;flex-direction:column;padding:22px;border-radius:8px;gap:15px;width:180px}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:72px 0 28px}.hero-art{height:390px}.portrait{height:365px;width:285px}.orbit{width:340px;height:340px}.tag.one{left:0;top:45px}.tag.two{right:0;bottom:34px}.scroll{display:none}section{padding:75px 0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.cards,.work-grid{grid-template-columns:1fr}.card{min-height:240px}.footer-inner{flex-direction:column}.contact-title{font-size:3rem}}
+  </style>
 </head>
 <body>
-    <audio  autoplay>
-        <source src="Cheques.mp3" type="audio/mp3">
-
-
-
-
-            
-
-      </audio>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="chiragl.jpg" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">HOME</a></li>
-                    <li><a href="#ABOUT">ABOUT</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>WEB DEVELOPER</p>
-                <H1>HI, I AM <span>JAYDIP</span><br>DARJI</H1>
-            
-            </div>
-        
-        
-        </div>
+  <header id="home">
+    <div class="wrap">
+      <nav><a class="brand" href="#home">JD<i>.</i></a><button class="menu" aria-label="Open navigation">☰</button><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#services">Expertise</a></li><li><a href="#work">Work</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+      <main class="hero"><div class="hero-copy"><div class="eyebrow">Computer Engineer · Web Developer</div><h1>Building digital experiences with <span>purpose.</span></h1><p>Hi, I’m Jaydip Darji. I combine thoughtful front-end development and data-driven problem solving to turn ideas into useful, polished products.</p><div class="actions"><a class="button primary" href="#work">View my work →</a><a class="button ghost" href="jdresume.pdf" download>Download résumé</a></div></div><div class="hero-art"><div class="orbit"></div><img class="portrait" src="chiragb.png" alt="Jaydip Darji"><span class="tag one">HTML / CSS / JS</span><span class="tag two">DATA + DESIGN</span></div><span class="scroll">SCROLL TO EXPLORE ↓</span></main>
     </div>
-
-    <!---------------ABOUT------------->
-    <div id="ABOUT">
-        <div class="container">
-            <div class="row">
-                <div class="ABOUT-col-1">
-                    <img src="chiragk.png" >
-                </div>
-                <div class="ABOUT-col-2">
-                    <h1 class="sub-title">ABOUT ME</h1>
-                    <p> I am darji jaydip, I am Pursuing bachelor's
-                        degree in computer engineering in
-                        gujarat power engineering and research institute. I am
-                        Interested in web development and i
-                        have knowledge of html,css,and javascript
-                        language. </P>
-
-
-                            <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</P>
-                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('Education')">Education</p>
-
-                        </div>
-                        <div class="tab-contents active-tab" id="Skills">
-                            <ul>
-                                <li><span>Web development</span><br>Html,Css,Javascript</li>
-                                <li><span>data scientist</span><br>Data analysis,Python,Python Liabraries,Machine Learning Algo</li>
-                                
-            
-                            </ul>
-
-                        </div>
-                        <div class="tab-contents" id="Experience">
-                            <ul>
-                                <li><span>company of codsoft</span><br>intrenship in data science</li>
-                                <li><span>company of creat solution</span><br>internship in php</li>
-                                <li><span>company of bharat intern</span><br>internship in web development</li>
-            
-                            </ul>
-
-                        </div>
-                        <div class="tab-contents" id="Education">
-                            <ul>
-                                <li><span>2018-SSC</span><br>shree v.k patel vidyalaya,karli</li>
-                                <li><span>2020-HSC</span><br>Sheth shree M.R.S highschool,unjha</li>
-                                <li><span>2020-2024-UNDERGRADUATE COMPUTER ENGINEERING</span><br>Gujarat power engineering and research institute</li>
-            
-                            </ul>
-
-                        </div>
-                    
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-    <!--------------projects---------------->
-    <div id="projects">
-        <div class="container">
-            <h1 class="sub-title">MY PROJECTS</h1>
-            <div class="projects-list">
-                <div>
-                    <i class="fas fa-code"></i>
-                    <h2>Data Science</h2>
-                    <p>This Internship During I Learn About Collecting Data Analyze
-                        And I Provide The Best Inside For Business Problem Using
-                        Python, Python Libraries -Numpy,Pandas
-                        SkLearn,Seaborn,Machine Learning Algorithm. </p>
-                        <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fas fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>This Internship During I Creat a Homepage Of Netflix , Temperature Converter Website,And Portfolio website
-                        About Me Using Html,Css,Javascript. </p>
-                        <a href="#">Learn more</a>
-                </div>
-                
-
-            </div>
-
-        </div>
-    </div>
-    <!--------------portfolio------------->
-    <div id="portfolio">
-        <div class="container">
-         <h1 class="sub-title">MY WORK PROJECTS </h1>
-         <div class="work-list">
-            <div class="work">
-                <img src="datas.png">
-                <div class="layer">
-                    <h3>1.Data Science Projects</h3>
-                    <p> just click and watch this project.</p>
-                    <a href="https://github.com/jaydipdarji1511/jaydipdarji1511.git"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="webde.png">
-                <div class="layer">
-                   <h3>2.Web Development Projects</h3>
-                    <p> just click and watch this project.</p>
-                    <a href="https://github.com/jaydipdarji1511/jaydipdarji1511.git"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-
-         </div>
-         <a href="#" class="btn">See More</a>
-
-        </div>
-
-    </div>
-    <!-------------contact-------------->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">CONTACT ME</h1>
-                    <p><i class="fas fa-paper-plane"></i> jaydipdarji065@gmail.com</p>
-                    <p><i class="fas fa-phone-square-alt"></i>9023977834</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/jaydip.daraji.98?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com/Darjijaydip71?t=XA_5x3wlNUae0bRqZS9g5g&s=09"><i class="fab fa-twitter-square"></i></a>
-                        <a href="https://instagram.com/jaydipdarji1511?igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/darji-jaydip-436516268"><i class="fab fa-linkedin"></i></a>
-                        
-
-                    </div>
-<a href="jdresume.pdf" download class="btn btn2">Download Cv</a>
-
-
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
-                         <button type="submit" class="btn btn2">Submit</button>
-
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-
-
-        </div>
-<div class="copyright">
-<p>Copyright @jaydip . Made With <i class="fas fa-heart"></i> By jaydip</p>
-</div>
-    </div>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links")
-        var tabcontents = document.getElementsByClassName("tab-contents")
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-        
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function openmenu(){
-            sidemenu.style.right = "-200";
-        }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby1yHElf22RLnDQD1pa1Wpu7fF59nGFhqsFlyroSjrlnMwvVtKW9-IXhgA_3lSNg7-P/exec'
-        const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById("msg")
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message Sent Successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-
-                }
-                  ,5000)
-                  form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script><nav></nav>
+  </header>
+  <section class="about" id="about"><div class="wrap about-grid"><div><div class="eyebrow">A little about me</div><h2 class="section-head" style="margin-top:12px">Curious by nature. Precise by practice.</h2><div class="stats"><div class="stat"><b>02+</b><span>Focused areas of expertise</span></div><div class="stat"><b>03</b><span>Professional internships completed</span></div></div></div><div><p class="about-text">I’m a Computer Engineering graduate from Gujarat Power Engineering and Research Institute. I enjoy the intersection of clean web experiences and practical data analysis—and I’m always learning what makes a digital product genuinely useful.</p><div class="skills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Data Analysis</span><span>Machine Learning</span></div></div></div></section>
+  <section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">What I do</div><h2>Skills that move ideas forward.</h2><p>From a first interface sketch to meaningful insights from a dataset, I bring a practical, detail-oriented approach.</p></div><div class="cards"><article class="card"><span class="num">01 / WEB DEVELOPMENT</span><h3>Web experiences</h3><p>Responsive, user-friendly websites built with HTML, CSS and JavaScript. I care about a smooth experience at every screen size.</p><a href="#contact">Let’s build something →</a></article><article class="card"><span class="num">02 / DATA SCIENCE</span><h3>Data insights</h3><p>Data cleaning, exploration and machine-learning fundamentals using Python and its ecosystem to help answer business questions.</p><a href="#work">Explore projects →</a></article></div></div></section>
+  <section class="work" id="work"><div class="wrap"><div class="section-head"><div class="eyebrow">Selected work</div><h2>A few things I’ve made.</h2><p>Projects and learning experiences across data science and front-end development.</p></div><div class="work-grid"><article class="work-item"><img class="work-image" src="datas.png" alt="Data science project preview"><div class="work-info"><h3>Data Science Projects</h3><p>Analysis and machine-learning work using Python, Pandas, NumPy, Scikit-learn and data visualisation.</p><a class="project-link" href="https://github.com/jaydipdarji1511/jaydipdarji1511" target="_blank" rel="noreferrer">View on GitHub ↗</a></div></article><article class="work-item"><img class="work-image" src="webde.png" alt="Web development project preview"><div class="work-info"><h3>Web Development Projects</h3><p>Front-end projects including a Netflix homepage, temperature converter and personal portfolio sites.</p><a class="project-link" href="https://github.com/jaydipdarji1511/jaydipdarji1511" target="_blank" rel="noreferrer">View on GitHub ↗</a></div></article></div></div></section>
+  <section id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Get in touch</div><h2 class="contact-title">Let’s create something <span>great.</span></h2><p style="color:var(--muted)">Have a project, role, or idea in mind? I’d be glad to hear from you.</p><div class="contact-details"><a href="mailto:jaydipdarji065@gmail.com">jaydipdarji065@gmail.com</a><a href="tel:+919023977834">+91 90239 77834</a><a href="https://www.linkedin.com/in/darji-jaydip-436516268" target="_blank" rel="noreferrer">LinkedIn profile ↗</a></div></div><form id="contact-form"><input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Email address" required><textarea name="message" placeholder="Tell me about your project" required></textarea><button class="button primary" type="submit">Send message →</button><p class="form-note" id="form-note"></p></form></div></section>
+  <footer><div class="wrap footer-inner"><span>© 2026 Jaydip Darji. Built with care.</span><div class="socials"><a href="https://github.com/jaydipdarji1511" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.instagram.com/jaydipdarji1511" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.linkedin.com/in/darji-jaydip-436516268" target="_blank" rel="noreferrer">LinkedIn</a></div></div></footer>
+  <script>
+    document.querySelector('.menu').addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open')));
+    document.querySelector('#contact-form').addEventListener('submit', e => { e.preventDefault(); document.querySelector('#form-note').textContent = 'Thanks! Your email app will open shortly.'; window.location.href = `mailto:jaydipdarji065@gmail.com?subject=${encodeURIComponent('Portfolio enquiry from ' + e.target.name.value)}&body=${encodeURIComponent(e.target.message.value + '\n\nReply to: ' + e.target.email.value)}`; e.target.reset(); });
+  </script>
 </body>
 </html>
